@@ -19,7 +19,8 @@ const cards = props.cards.map(card =>
       {cards}
       
     </div>
-
+    <button type="button" class="List-add-button">+ Add Random Card
+      </button>
     </section>
   );
 }
