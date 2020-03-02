@@ -1,14 +1,14 @@
 import React from 'react';
-import List from './List.';
+import './Card.css';
 
 
 
-function Card(title, content){
+function Card(props){
 
   return (
-  <div className="card">
-    <h3>{title}</h3>
-    <p>{content}</p>
+  <div className="Card">
+    <h3>{props.title}</h3>
+    <p>{props.content}</p>
   </div>
   );
 }

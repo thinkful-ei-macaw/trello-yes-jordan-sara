@@ -1,26 +1,26 @@
 import React from 'react';
-import card from './Card'
-import app from './App'
-import store from './store'
+import Card from './Card'
+import './List.css';
 
 
 
-function List(header, cards){
+function List(props){
 
-  //get title and content from cards
-  //title = title.cards
-  //content=content.cards
 
-  //Card(title, content)
+  //returns an array of elements
+
+const cards = props.cards.map(card => 
+<Card key={card.id} title={card.title} content={card.content} />)
 
   return (
-    <div>
-    <header>{header}</header>
+    <section className="List">
+    <header className="List-header"><h2>{props.header}</h2></header>
     <div className="List-cards">
-
+      {cards}
+      
     </div>
 
-    </div>
+    </section>
   );
 }
 
